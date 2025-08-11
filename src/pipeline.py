@@ -3,6 +3,7 @@ import numpy as np
 from scipy.signal import butter, filtfilt
 from torchvision import transforms
 
+
 def load_dataset(name):
     if name == "sample-image":
         # load a tiny set from data/images using torchvision or PIL
@@ -27,4 +28,15 @@ def preprocess(X, task, resize=None, bandpass=False):
     else:
         # apply bandpass to ECG/EEG
         return [bandpass_filter(x) if bandpass else x for x in X]
+    
+def extract_features(X, task):
+    # For now, just return X — later we’ll compute features here
+    return X
 
+
+
+
+from helper_utils import detect_objects
+
+def run_object_detection(input_path, output_path):
+    return detect_objects(input_path, output_path)

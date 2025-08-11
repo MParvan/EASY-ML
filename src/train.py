@@ -1,7 +1,7 @@
 # train.py
 import argparse
 from pipeline import load_dataset, preprocess
-from utils import save_model, create_model
+from helper_utils import save_model, create_model
 import torch
 from torch.utils.data import DataLoader, TensorDataset
 
