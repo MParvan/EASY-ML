@@ -6,7 +6,7 @@ from utils import load_model, run_inference
 st.title("Biosignal / Image Mini-Lab")
 
 task = st.selectbox("Task", ["Image classification","ECG biometrics","EEG classification"])
-dataset = st.selectbox("Dataset", ["sample-image","sample-ecg"])
+dataset = st.selectbox("Dataset", ["ECG-ID","Heartprint"])
 
 if st.button("Load sample"):
     X, y = load_dataset(dataset)
